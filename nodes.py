@@ -623,23 +623,6 @@ class H3ClownShotCounter:
                 "result": (shot, max(0, shot - 1), shot > 1)}
 
 
-# ---- live folder check for the Geiru Shot Counter display
-try:
-    from server import PromptServer
-    from aiohttp import web as _web
-
-    @PromptServer.instance.routes.get("/clown/saved_shot")
-    async def _clown_saved_shot(request):
-        prefix = request.rel_url.query.get("prefix", "")
-        try:
-            last = H3ClownShotCounter._saved_shot(prefix)
-            return _web.json_response({"last": int(last), "next": int(last) + 1})
-        except Exception as e:
-            return _web.json_response({"error": str(e)}, status=400)
-except Exception as _e:
-    print(f"[clown nodes] saved_shot route not registered: {_e}")
-
-
 NODE_CLASS_MAPPINGS = {
     "H3ClownContextExperimental": H3ClownContextExperimental,
     "H3BlockTailAnchorExperimental": H3BlockTailAnchorExperimental,

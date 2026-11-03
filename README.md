@@ -1,5 +1,7 @@
 # Geiru Context Suite
 
+> **Modified copy, November 3, 2026.** Cut from [roycho87/geiru_context_suite](https://github.com/roycho87/geiru_context_suite) at `6dbdcc38`. Removed: the Geiru Chain node (`clown_chain.py`), the `web/` folder and the `/clown/saved_shot` route, for headless runs. Sections below that describe them no longer apply. Nothing else changed. GPL-3.0, as the original.
+
 ComfyUI nodes for chaining MiniMax H3 clips without the quality slowly falling apart.
 
 > **New name.** This used to be the **Clown Context Suite**. ClownsharkBatwing's [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF) nodes are already called Clown-everything, and they're some of the most widely used nodes in ComfyUI, so to avoid mix-ups the suite is now named after the clown herself: **Geiru**. Only the names you see changed. The internal node names (`H3Clown...`) are the same, so workflows saved with the old names still load.
